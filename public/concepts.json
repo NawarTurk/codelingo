@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "What are the OOP Pillars?",
+        "description": "asdadasd",
+        "example": "asdasdsd",
+        "difficulty": "beginner",
+        "quiz": "N/A"
+    },
+    {
+        "id": 1,
+        "title": "Give me an example of inheritance",
+        "description": "asdasd",
+        "example": "drama",
+        "difficulty": "beginner",
+        "quiz": "N/A"
+    }
+  ]
