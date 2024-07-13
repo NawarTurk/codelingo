@@ -15,12 +15,11 @@ function App() {
 
 
 
-
   return (
   
     <div>
       <Header />
-      <ConceptGrid />
+      <ConceptGrid concepts={concepts} />
       <Footer />
     </div>
   );
