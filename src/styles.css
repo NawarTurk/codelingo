@@ -1,9 +1,10 @@
-/* Concept.css */
+/* styles.css */
 
 .concept-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
   }
   
   .concept {
@@ -29,23 +30,44 @@
     margin: 5px 0;
   }
   
-  .concept p:first-of-type {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 10px;
+  .concept pre, .concept code {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
   }
   
-  .concept p:nth-of-type(2) {
-    font-style: italic;
-    color: #666;
+  .concept pre {
+    white-space: pre-wrap; /* Wrap long lines */
   }
   
-  .concept p:nth-of-type(3) {
+  .concept code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d14;
+    display: block;
+  }
+  
+  /* Difficulty levels */
+  .difficulty {
     font-weight: bold;
-    color: #d32f2f;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
   }
   
-  .concept p:nth-of-type(4) {
-    color: #1976d2;
+  .difficulty.beginner {
+    color: white;
+    background-color: green;
+  }
+  
+  .difficulty.intermediate {
+    color: white;
+    background-color: orange;
+  }
+  
+  .difficulty.advanced {
+    color: white;
+    background-color: red;
   }
   

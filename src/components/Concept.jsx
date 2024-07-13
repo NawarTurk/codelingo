@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import '../styles.css';
 
 export default function Concept({
@@ -12,8 +12,8 @@ export default function Concept({
     <div className="concept">
       <h3>{title}</h3>
       <p>{description}</p>
-      <p>{example}</p>
-      <p>{difficulty}</p>
+      <div dangerouslySetInnerHTML={{ __html: example }} />
+      <p className={`difficulty ${difficulty.toLowerCase()}`}>{difficulty}</p>
       <p>{quiz}</p>
     </div>
   );
