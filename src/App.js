@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./App.css";
 import ConceptGrid from "./components/ConceptGrid";
 import { useState, useEffect } from "react";
 
