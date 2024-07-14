@@ -6,74 +6,81 @@
     gap: 20px;
     padding: 20px;
   } */
-  
-  .concept {
-    border: 2px solid #4c7caf;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #e8f5e9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .concept:hover {
-    transform: scale(1.02);
-  }
-  
-  .concept h3 {
-    font-size: 1.8em;
-    color: #2e5d7d;
-    margin-bottom: 10px;
-  }
-  
-  .concept p {
-    margin: 5px 0;
-  }
-  
-  .concept pre, .concept code {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    overflow-x: auto;
-  }
-  
-  .concept pre {
-    white-space: pre-wrap; /* Wrap long lines */
-  }
-  
-  .concept code {
-    font-family: 'Courier New', Courier, monospace;
-    color: #d14;
-    display: block;
-  }
-  
-  /* Difficulty levels */
-  .difficulty {
-    font-weight: bold;
-    display: inline-block;
-    padding: 5px;
-    border-radius: 3px;
-  }
-  
-  .difficulty.beginner {
-    color: white;
-    background-color: green;
-  }
-  
-  .difficulty.intermediate {
-    color: white;
-    background-color: orange;
-  }
-  
-  .difficulty.advanced {
-    color: white;
-    background-color: red;
-  }
-  
-  .content-visible {
-    display:block
-  }
-  .content-hidden {
-    display:none
-  }
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.concept {
+  border: 2px solid #4c7caf;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #e8f5e9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.concept:hover {
+  transform: scale(1.02);
+}
+
+.concept h3 {
+  font-size: 1.8em;
+  color: #2e5d7d;
+  margin-bottom: 10px;
+}
+
+.concept p {
+  margin: 5px 0;
+}
+
+.concept pre,
+.concept code {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.concept pre {
+  white-space: pre-wrap; /* Wrap long lines */
+}
+
+.concept code {
+  font-family: "Courier New", Courier, monospace;
+  color: #d14;
+  display: block;
+}
+
+/* Difficulty levels */
+.difficulty {
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.difficulty.beginner {
+  color: white;
+  background-color: green;
+}
+
+.difficulty.intermediate {
+  color: white;
+  background-color: orange;
+}
+
+.difficulty.advanced {
+  color: white;
+  background-color: red;
+}
+
+.content-visible {
+  display: block;
+}
+.content-hidden {
+  display: none;
+}
