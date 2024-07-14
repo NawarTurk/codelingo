@@ -12,12 +12,18 @@ export default function Concept({
 
   return (
     <div className="concept">
-      <h3 onClick={(e) => setIsExpanded(!isExpanded)}>{title}</h3>
-
+      <div
+        className="title-container"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <h3 className="title">{title} </h3>
+        <span className={`difficulty ${difficulty.toLowerCase()}`}>
+          {difficulty}
+        </span>
+      </div>
       <div className={isExpanded ? "content-visible" : "content-hidden"}>
         <p>{description}</p>
         <div dangerouslySetInnerHTML={{ __html: example }} />
-        <p className={`difficulty ${difficulty.toLowerCase()}`}>{difficulty}</p>
         <p>{quiz}</p>
       </div>
     </div>

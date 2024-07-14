@@ -55,14 +55,27 @@
   display: block;
 }
 
-/* Difficulty levels */
-.difficulty {
+.concept .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Indicates that the container is clickable */
+}
+
+.concept .title {
+  margin: 0; /* Remove default margins */
+}
+
+.concept .difficulty {
+  font-size: 1rem; /* Adjust font size to match paragraph text */
+  font-weight: normal; /* Ensure the font weight is normal */
   font-weight: bold;
   display: inline-block;
   padding: 5px;
   border-radius: 3px;
 }
 
+/* Difficulty levels */
 .difficulty.beginner {
   color: white;
   background-color: green;
