@@ -1,43 +1,50 @@
 [
-    {
-      "id": 1,
-      "title": "Props Drilling",
-      "description": "Props drilling refers to the process of passing data from one component to another through multiple layers of components in a React application.",
-      "example": "<pre><code>function App() {\n  const user = { name: 'Alice' };\n  return &lt;Parent user={user} /&gt;;\n}\nfunction Parent({ user }) {\n  return &lt;Child user={user} /&gt;;\n}\nfunction Child({ user }) {\n  return &lt;div&gt;{user.name}&lt;/div&gt;;\n}\n// The user object is passed down from App to Child through Parent.</code></pre>",
-      "difficulty": "beginner",
-      "quiz": "What is props drilling and how can it be avoided?"
-    },
-    {
-      "id": 2,
-      "title": "Type Inference",
-      "description": "Type inference refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on its value without explicit type annotations.",
-      "example": "<pre><code>let x = 10; // x is inferred to be a number\nlet y = 'hello'; // y is inferred to be a string\nfunction add(a: number, b: number): number {\n  return a + b;\n}\nconst result = add(2, 3); // result is inferred to be a number\n// TypeScript infers types from the values assigned and function return types.</code></pre>",
-      "difficulty": "beginner",
-      "quiz": "What are the benefits of type inference in TypeScript?"
-    },
-    {
-      "id": 3,
-      "title": "Promises",
-      "description": "Promises in JavaScript are used to handle asynchronous operations, providing a way to attach callbacks for success (resolved) and failure (rejected) cases.",
-      "example": "<pre><code>const fetchData = () => {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve('Data received');\n    }, 2000);\n  });\n};\nfetchData()\n  .then(data => console.log(data)) // Outputs: Data received after 2 seconds\n  .catch(error => console.error(error));\n// Promises provide a clean way to handle asynchronous operations.</code></pre>",
-      "difficulty": "advanced",
-      "quiz": "What are the three states of a promise in JavaScript?"
-    },
-    {
-      "id": 4,
-      "title": "RESTful APIs",
-      "description": "RESTful APIs are web services that follow the principles of Representational State Transfer (REST), allowing different systems to communicate over HTTP.",
-      "example": "<pre><code>- GET /users: Retrieves a list of users.\n- POST /users: Creates a new user.\n- PUT /users/1: Updates the details of user with ID 1.\n- DELETE /users/1: Deletes the user with ID 1.\n// Each endpoint corresponds to a specific HTTP method and URL.</code></pre>",
-      "difficulty": "beginner",
-      "quiz": "What are the common HTTP methods used in RESTful APIs?"
-    },
-    {
-      "id": 5,
-      "title": "Recursion",
-      "description": "Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem, often used for tasks that can be divided into similar subtasks.",
-      "example": "<pre><code>function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\nconst result = factorial(5); // Outputs: 120\n// The factorial function calls itself with a decremented value until it reaches the base case.</code></pre>",
-      "difficulty": "intermediate",
-      "quiz": "What is recursion and how is it different from iteration?"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Destructuring Assignment",
+    "description": "Destructuring assignment is a syntax in JavaScript that allows you to unpack values from arrays or properties from objects into distinct variables. It makes the code more concise and readable by allowing the extraction of multiple properties in one statement.",
+    "example": "<pre><code>// Destructuring arrays\nconst [a, b] = [1, 2];\nconsole.log(a); // Outputs: 1\nconsole.log(b); // Outputs: 2\n\n// Destructuring objects\nconst user = { name: 'Alice', age: 25 };\nconst { name, age } = user;\nconsole.log(name); // Outputs: Alice\nconsole.log(age); // Outputs: 25\n\n// This allows for concise and readable code by extracting multiple properties in one statement.</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What is destructuring assignment in JavaScript?"
+  },
+  {
+    "id": 2,
+    "title": "Array.filter",
+    "description": "The `.filter` method creates a new array containing only the elements that pass a specified test implemented by a provided function. It iterates through each element in the array and includes it in the new array only if the function returns `true` for that element.",
+    "example": "<pre><code>const numbers = [1, 2, 3, 4];\nconst evenNumbers = numbers.filter(n => n % 2 === 0);\nconsole.log(evenNumbers); // Outputs: [2, 4]\n// The .filter method applies the provided function to each element of the array and returns a new array with elements that pass the test.</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What does the .filter method do in JavaScript, and provide an example?"
+  },
+  {
+    "id": 3,
+    "title": "Array.map",
+    "description": "The `.map` method creates a new array populated with the results of calling a provided function on every element in the calling array. It applies the function to each element and returns a new array containing the transformed elements.",
+    "example": "<pre><code>const numbers = [1, 2, 3, 4];\nconst doubled = numbers.map(n => n * 2);\nconsole.log(doubled); // Outputs: [2, 4, 6, 8]\n// The .map method applies the provided function to each element of the array and returns a new array.</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What does the .map method do in JavaScript, and provide an example?"
+  },
+  {
+    "id": 4,
+    "title": "Nested Destructuring",
+    "description": "Nested destructuring allows you to extract values from nested objects and arrays. This means you can unpack properties from objects within objects, or elements from arrays within arrays, making it easier to work with complex data structures.",
+    "example": "<pre><code>const handleCheckboxChange = ({ target: { value, checked } }) => {\n  // This is an example of Nested destructuring\n  // Destructuring the event object to get the target element\n  // Then destructuring the target element to get the 'value' and 'checked' properties\n  // This is equivalent to:\n  // const value = event.target.value;\n  // const checked = event.target.checked;\n};</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What is nested destructuring in JavaScript, and provide an example?"
+  },
+  {
+    "id": 5,
+    "title": "Conditional Rendering with Ternary Operator",
+    "description": "The ternary operator in JavaScript is a concise way to perform conditional rendering. It evaluates a condition and returns one value if the condition is true and another value if it is false.",
+    "example": "<pre><code>&lt;div className={isExpanded ? 'content-visible' : 'content-hidden'}&gt;&lt;/div&gt;\n// This renders the div with 'content-visible' class if isExpanded is true,\n// otherwise it renders with 'content-hidden' class.</code></pre>",
+    "difficulty": "intermediate",
+    "quiz": "How do you use the ternary operator for conditional rendering in React?"
+  },
+  {
+    "id": 6,
+    "title": "Using the Previous State in React",
+    "description": "In React, when updating state based on the previous state, it is common to use the functional form of the state setter function. This form provides the previous state as an argument, ensuring that the state updates correctly, even if there are multiple state updates in a short period of time.",
+    "example": "<pre><code>setDifficulties((prev) =>\n  checked\n    ? [...prev, value.toLowerCase()]\n    : prev.filter((difficulty) => difficulty !== value.toLowerCase())\n);\n// This uses the previous state 'prev' to add or remove difficulties based on the checkbox state.</code></pre>",
+    "difficulty": "advanced",
+    "quiz": "Why is it important to use the previous state when updating state in React?"
+  }
+]
