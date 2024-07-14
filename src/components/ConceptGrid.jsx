@@ -13,17 +13,20 @@ export default function ConceptGrid({ concepts }) {
     //    const value = event.target.value;
     //    const checked = event.target.checked;
 
-    setDifficulties((prev) =>
-      checked
-        ? [...prev, value.toLowerCase()]
-        : prev.filter((difficulty) => difficulty !== value.toLowerCase())
-    );
+    if (value === "all") {
+      checked ? setDifficulties(["all"]) : setDifficulties([]);
+    } else {
+      setDifficulties((prev) =>
+        checked
+          ? [...prev.filter((difficulty) => difficulty !== "all"), value]
+          : prev.filter((difficulty) => difficulty !== value)
+      );
+    }
   };
 
   const filteredConcepts = concepts.filter(
     (concept) =>
-      difficulties.includes(concept.difficulty.toLowerCase()) ||
-      difficulties.includes("all")
+      difficulties.includes(concept.difficulty) || difficulties.includes("all")
   );
 
   return (

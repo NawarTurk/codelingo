@@ -46,5 +46,21 @@
     "example": "<pre><code>setDifficulties((prev) =>\n  checked\n    ? [...prev, value.toLowerCase()]\n    : prev.filter((difficulty) => difficulty !== value.toLowerCase())\n);\n// This uses the previous state 'prev' to add or remove difficulties based on the checkbox state.</code></pre>",
     "difficulty": "advanced",
     "quiz": "Why is it important to use the previous state when updating state in React?"
+  },
+  {
+    "id": 7,
+    "title": "Using the Spread Operator",
+    "description": "The spread operator (`...`) in JavaScript makes it easy to work with arrays. It can combine multiple arrays into one or create a copy of an array.",
+    "example": "<pre><code>// Example of using the spread operator with arrays:\nconst arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst combined = [...arr1, ...arr2];\nconsole.log(combined); // Output: [1, 2, 3, 4, 5, 6]\n\n// Example of using the spread operator to copy an array:\nconst original = ['a', 'b', 'c'];\nconst copy = [...original];\nconsole.log(copy); // Output: ['a', 'b', 'c']</code></pre>",
+    "difficulty": "beginner",
+    "quiz": "How do you use the spread operator to combine two arrays?"
+  },
+  {
+    "id": 8,
+    "title": "Using the Spread Operator in State Updates",
+    "description": "The spread operator (`...`) in JavaScript allows you to create a new array that includes elements from an existing array, as well as any additional elements you specify. This is useful in React when you want to update state by adding new values to the previous state.",
+    "example": "<pre><code>setDifficulties((prev) =>\n  checked\n    ? [...prev, value.toLowerCase()]\n    : prev.filter((difficulty) => difficulty !== value.toLowerCase())\n);\n// The spread operator is used to add the new difficulty to the previous state.</code></pre>",
+    "difficulty": "intermediate",
+    "quiz": "How do you use the spread operator to update state in React?"
   }
 ]
