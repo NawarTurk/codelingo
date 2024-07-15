@@ -31,58 +31,60 @@ export default function ConceptGrid({ concepts }) {
 
   return (
     <>
-      <label
-        className={`checkbox-label ${
-          difficulties.includes("all") ? "selected" : ""
-        }`}
-      >
-        <input
-          type="checkbox"
-          value="all"
-          checked={difficulties.includes("all")}
-          onChange={handleCheckboxChange}
-        />
-        All
-      </label>
-      <label
-        className={`checkbox-label ${
-          difficulties.includes("easy") ? "selected" : ""
-        }`}
-      >
-        <input
-          type="checkbox"
-          value="easy"
-          checked={difficulties.includes("easy")}
-          onChange={handleCheckboxChange}
-        />
-        Easy
-      </label>
-      <label
-        className={`checkbox-label ${
-          difficulties.includes("intermediate") ? "selected" : ""
-        }`}
-      >
-        <input
-          type="checkbox"
-          value="intermediate"
-          checked={difficulties.includes("intermediate")}
-          onChange={handleCheckboxChange}
-        />
-        Intermediate
-      </label>
-      <label
-        className={`checkbox-label ${
-          difficulties.includes("advanced") ? "selected" : ""
-        }`}
-      >
-        <input
-          type="checkbox"
-          value="advanced"
-          checked={difficulties.includes("advanced")}
-          onChange={handleCheckboxChange}
-        />
-        Advanced
-      </label>
+      <div className="checkbox-group">
+        <label
+          className={`checkbox-label ${
+            difficulties.includes("all") ? "selected" : ""
+          }`}
+        >
+          <input
+            type="checkbox"
+            value="all"
+            checked={difficulties.includes("all")}
+            onChange={handleCheckboxChange}
+          />
+          All
+        </label>
+        <label
+          className={`checkbox-label ${
+            difficulties.includes("easy") ? "selected" : ""
+          }`}
+        >
+          <input
+            type="checkbox"
+            value="easy"
+            checked={difficulties.includes("easy")}
+            onChange={handleCheckboxChange}
+          />
+          Easy
+        </label>
+        <label
+          className={`checkbox-label ${
+            difficulties.includes("intermediate") ? "selected" : ""
+          }`}
+        >
+          <input
+            type="checkbox"
+            value="intermediate"
+            checked={difficulties.includes("intermediate")}
+            onChange={handleCheckboxChange}
+          />
+          Intermediate
+        </label>
+        <label
+          className={`checkbox-label ${
+            difficulties.includes("advanced") ? "selected" : ""
+          }`}
+        >
+          <input
+            type="checkbox"
+            value="advanced"
+            checked={difficulties.includes("advanced")}
+            onChange={handleCheckboxChange}
+          />
+          Advanced
+        </label>
+      </div>
 
       <div className="concept-grid">
         {filteredConcepts.map((concept) => (

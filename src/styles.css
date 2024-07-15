@@ -122,4 +122,8 @@
   color: white
 }
 
+.checkbox-group {
+  display: flex;
+}
+
 
