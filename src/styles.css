@@ -51,7 +51,7 @@
 
 .concept code {
   font-family: "Courier New", Courier, monospace;
-  color: #d14;
+  color: rgb(9, 13, 239);
   display: block;
 }
 
@@ -97,3 +97,29 @@
 .content-hidden {
   display: none;
 }
+
+.checkbox-label {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color:  #e0efff;
+  color: #2e5d7d;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  
+}
+
+.checkbox-label input {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+
+.checkbox-label.selected {
+  background-color:  #2e5d7d;
+  border-color: #2e5d7d;
+  color: white
+}
+
+

@@ -31,7 +31,11 @@ export default function ConceptGrid({ concepts }) {
 
   return (
     <>
-      <label>
+      <label
+        className={`checkbox-label ${
+          difficulties.includes("all") ? "selected" : ""
+        }`}
+      >
         <input
           type="checkbox"
           value="all"
@@ -40,7 +44,11 @@ export default function ConceptGrid({ concepts }) {
         />
         All
       </label>
-      <label>
+      <label
+        className={`checkbox-label ${
+          difficulties.includes("easy") ? "selected" : ""
+        }`}
+      >
         <input
           type="checkbox"
           value="easy"
@@ -49,7 +57,11 @@ export default function ConceptGrid({ concepts }) {
         />
         Easy
       </label>
-      <label>
+      <label
+        className={`checkbox-label ${
+          difficulties.includes("intermediate") ? "selected" : ""
+        }`}
+      >
         <input
           type="checkbox"
           value="intermediate"
@@ -58,7 +70,11 @@ export default function ConceptGrid({ concepts }) {
         />
         Intermediate
       </label>
-      <label>
+      <label
+        className={`checkbox-label ${
+          difficulties.includes("advanced") ? "selected" : ""
+        }`}
+      >
         <input
           type="checkbox"
           value="advanced"

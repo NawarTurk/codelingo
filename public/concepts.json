@@ -52,7 +52,7 @@
     "title": "Using the Spread Operator",
     "description": "The spread operator (`...`) in JavaScript makes it easy to work with arrays. It can combine multiple arrays into one or create a copy of an array.",
     "example": "<pre><code>// Example of using the spread operator with arrays:\nconst arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst combined = [...arr1, ...arr2];\nconsole.log(combined); // Output: [1, 2, 3, 4, 5, 6]\n\n// Example of using the spread operator to copy an array:\nconst original = ['a', 'b', 'c'];\nconst copy = [...original];\nconsole.log(copy); // Output: ['a', 'b', 'c']</code></pre>",
-    "difficulty": "beginner",
+    "difficulty": "easy",
     "quiz": "How do you use the spread operator to combine two arrays?"
   },
   {
@@ -62,5 +62,13 @@
     "example": "<pre><code>setDifficulties((prev) =>\n  checked\n    ? [...prev, value.toLowerCase()]\n    : prev.filter((difficulty) => difficulty !== value.toLowerCase())\n);\n// The spread operator is used to add the new difficulty to the previous state.</code></pre>",
     "difficulty": "intermediate",
     "quiz": "How do you use the spread operator to update state in React?"
+  },
+  {
+    "id": 9,
+    "title": "Template Literals",
+    "description": "Template literals are a feature in JavaScript that allow you to embed expressions and variables within strings. They use backticks (` `) instead of quotes and can contain placeholders indicated by the dollar sign and curly braces (${expression}). This makes it easier to create complex strings.",
+    "example": "<pre><code>// Example of using template literals\nconst name = 'Alice';\nconst age = 25;\nconst greeting = `Hello, my name is ${name} and I am ${age} years old.`;\nconsole.log(greeting); // Outputs: Hello, my name is Alice and I am 25 years old.\n\n// Example of using template literals in JSX\n&lt;label\n  className={`checkbox-label ${difficulties.includes('advanced') ? 'selected' : ''}`}\n&gt;\n  Advanced\n&lt;/label&gt;\n\n// Explanation of the JSX example\n// 1. **Template Literals**: Template literals in JavaScript are defined using backticks (`` ` ``). They allow embedding expressions inside a string using `${expression}`.\n// 2. **Conditional Class Assignment**: In JSX, you can dynamically assign class names using template literals. The expression inside the curly braces `${}` evaluates whether the `difficulties` array includes the string 'advanced'.\n// 3. **Class Assignment**: If `difficulties.includes('advanced')` evaluates to `true`, the string 'selected' is included in the class name. If `false`, an empty string is included. The resulting class name will be either `checkbox-label selected` or just `checkbox-label` depending on the condition.\n// 4. **Rendered Output**: The &lt;label&gt; element will have a class of `checkbox-label` by default. If 'advanced' is included in the `difficulties` array, it will also have the `selected` class, resulting in `class=\"checkbox-label selected\"`. The text content of the label is 'Advanced'.\n</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What are template literals in JavaScript, and how do you use them?"
   }
 ]
