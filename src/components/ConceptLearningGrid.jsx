@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Concept from "./Concept";
 import "../styles.css";
 
-export default function ConceptGrid({ concepts }) {
+export default function ConceptLearningGrid({ concepts }) {
   const [difficulties, setDifficulties] = useState(["all"]);
 
   const handleCheckboxChange = ({ target: { value, checked } }) => {

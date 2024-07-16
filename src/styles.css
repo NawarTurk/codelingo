@@ -73,6 +73,7 @@
   display: inline-block;
   padding: 5px;
   border-radius: 3px;
+  border-radius: 10px;
 }
 
 /* Difficulty levels */
@@ -103,11 +104,10 @@
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color:  #e0efff;
+  background-color: #e0efff;
   color: #2e5d7d;
   cursor: pointer;
   transition: background-color 0.5s, color 0.5s;
-  
 }
 
 .checkbox-label input {
@@ -117,13 +117,42 @@
 }
 
 .checkbox-label.selected {
-  background-color:  #2e5d7d;
+  background-color: #2e5d7d;
   border-color: #2e5d7d;
-  color: white
+  color: white;
 }
 
 .checkbox-group {
   display: flex;
 }
+nav {
+  background: #2e5d7d; /* Changed to match your concept title color */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
 
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox to align items inline */
+  justify-content: center; /* Center the navigation items */
+}
 
+nav ul li {
+  margin: 0 20px; /* Adjust spacing around each link */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px; /* Adds padding to increase clickable area and visual size */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  text-decoration: underline;
+  background-color: #4c7caf; /* Adds a subtle background on hover/focus to match border color of concept */
+}
