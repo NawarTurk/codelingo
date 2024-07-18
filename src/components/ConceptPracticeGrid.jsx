@@ -15,38 +15,50 @@ export default function ConceptPracticeGrid({ questions }) {
     setAsnwersState(new Array(questions.length).fill(null));
   }
 
-  function countCorrectResult() {
+  function getResults() {
     const result = answersState.reduce(
       (acc, answer) => {
         if (answer) {
           acc.correct++;
+          acc.remainingQuestions--;
         } else if (answer === false) {
           acc.wrong++;
+          acc.remainingQuestions--;
         }
         return acc;
       },
       {
         correct: 0,
         wrong: 0,
+        remainingQuestions: questions.length,
       }
     );
 
     const totalAnswers = result.wrong + result.correct;
 
     if (totalAnswers === 0) {
-      return "0%";
+      return { score: "0%", remainingQuestions: result.remainingQuestions };
     }
 
     const resultPercentage =
       Math.floor((result.correct / totalAnswers) * 100) + "%";
 
-    return resultPercentage;
+    return {
+      score: resultPercentage,
+      remainingQuestions: result.remainingQuestions,
+    };
   }
+
+  const { score, remainingQuestions } = getResults();
 
   return (
     <div>
       <button onClick={() => handleReset()}>Reset</button>
-      <p>{countCorrectResult()}</p>
+      <p>{score}</p>
+      <p>
+        remaining questions:{" "}
+        {remainingQuestions === 0 ? "All Done! Good Job" : remainingQuestions}
+      </p>
       {questions.map((question, questionIndex) => (
         <div key={questionIndex}>
           <h1>{question.questionText}</h1>

@@ -1,6 +1,8 @@
 [
   {
     "questionText": "What is destructuring assignment in JavaScript?",
+    "category": "Destructuring",
+
     "answers": [
       { "answerText": "A way to merge arrays", "isCorrect": false },
       {
@@ -15,6 +17,8 @@
   },
   {
     "questionText": "What does the .filter method do in JavaScript?",
+    "category": "Array Methods",
+
     "answers": [
       { "answerText": "It sorts the elements of an array", "isCorrect": false },
       {
@@ -29,6 +33,8 @@
   },
   {
     "questionText": "What does the .map method do in JavaScript?",
+    "category": "Array Methods",
+
     "answers": [
       { "answerText": "It sorts the elements of an array", "isCorrect": false },
       {
@@ -43,6 +49,8 @@
   },
   {
     "questionText": "What is nested destructuring in JavaScript?",
+    "category": "Destructuring",
+
     "answers": [
       {
         "answerText": "A way to merge multiple arrays into one",
@@ -60,6 +68,7 @@
   },
   {
     "questionText": "How do you use the ternary operator for conditional rendering in React?",
+    "category": "Ternary Operator",
     "answers": [
       { "answerText": "By using an if-else statement", "isCorrect": false },
       {
@@ -74,6 +83,8 @@
   },
   {
     "questionText": "Why is it important to use the previous state when updating state in React?",
+    "category": "State Management",
+
     "answers": [
       {
         "answerText": "It ensures the state updates correctly, even with multiple updates in a short period",
@@ -91,6 +102,8 @@
   },
   {
     "questionText": "How do you use the spread operator to combine two arrays?",
+    "category": "Spreading",
+
     "answers": [
       { "answerText": "By using the concat method", "isCorrect": false },
       {
@@ -105,6 +118,7 @@
   },
   {
     "questionText": "How do you use the spread operator to update state in React?",
+    "category": "Spreading",
     "answers": [
       {
         "answerText": "By creating a new array that includes elements from the previous state and additional elements",
@@ -119,6 +133,8 @@
   },
   {
     "questionText": "What are template literals in JavaScript, and how do you use them?",
+    "category": "Template Literals",
+
     "answers": [
       {
         "answerText": "A way to create strings by concatenating variables",
@@ -133,6 +149,8 @@
   },
   {
     "questionText": "What is the difference between synchronous and asynchronous code in JavaScript?",
+    "category": "Asynchronous",
+
     "answers": [
       {
         "answerText": "Synchronous code runs sequentially, while asynchronous code allows multiple operations to run simultaneously",
@@ -150,6 +168,8 @@
   },
   {
     "questionText": "What is non-blocking code in JavaScript, and why is it important?",
+    "category": "Asynchronous",
+
     "answers": [
       {
         "answerText": "Code that uses promises and async/await",
@@ -167,6 +187,8 @@
   },
   {
     "questionText": "What is a promise in JavaScript, and how do you use it?",
+    "category": "Asynchronous",
+
     "answers": [
       {
         "answerText": "A method to handle synchronous operations",
@@ -181,6 +203,8 @@
   },
   {
     "questionText": "What is async/await in JavaScript, and how do you use it?",
+    "category": "Asynchronous",
+
     "answers": [
       {
         "answerText": "A method to handle synchronous code",
@@ -195,6 +219,8 @@
   },
   {
     "questionText": "What are the differences between Promises and async/await in JavaScript?",
+    "category": "Asynchronous",
+
     "answers": [
       {
         "answerText": "Promises use '.then()' and '.catch()', while async/await makes asynchronous code look like synchronous code",
