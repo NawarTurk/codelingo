@@ -8,11 +8,18 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [concepts, setConcepts] = useState([]);
+  const [conceptPracticeQuestions, setConceptPracticeQuestions] = useState([]);
 
   useEffect(() => {
     fetch("concepts.json")
       .then((response) => response.json())
       .then((data) => setConcepts(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("conceptPractice.json")
+      .then((response) => response.json())
+      .then((data) => setConceptPracticeQuestions(data));
   }, []);
 
   return (
@@ -39,7 +46,12 @@ function App() {
             path="/"
             element={<ConceptLearningGrid concepts={concepts} />}
           ></Route>
-          <Route path="/practice" element={<ConceptPracticeGrid />}></Route>
+          <Route
+            path="/practice"
+            element={
+              <ConceptPracticeGrid questions={conceptPracticeQuestions} />
+            }
+          ></Route>
           <Route path="/test" element={<ConceptTestingGrid />}></Route>
         </Routes>
       </Router>

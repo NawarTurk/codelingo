@@ -1,0 +1,213 @@
+[
+  {
+    "questionText": "What is destructuring assignment in JavaScript?",
+    "answers": [
+      { "answerText": "A way to merge arrays", "isCorrect": false },
+      {
+        "answerText": "A syntax that allows unpacking values from arrays or properties from objects into distinct variables",
+        "isCorrect": true
+      },
+      {
+        "answerText": "A method to sort arrays based on specific conditions",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "What does the .filter method do in JavaScript?",
+    "answers": [
+      { "answerText": "It sorts the elements of an array", "isCorrect": false },
+      {
+        "answerText": "It creates a new array with all elements that pass a test implemented by a provided function",
+        "isCorrect": true
+      },
+      {
+        "answerText": "It modifies the original array by removing elements that do not meet specific criteria defined by a function",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "What does the .map method do in JavaScript?",
+    "answers": [
+      { "answerText": "It sorts the elements of an array", "isCorrect": false },
+      {
+        "answerText": "It creates a new array populated with the results of calling a provided function on every element in the calling array",
+        "isCorrect": true
+      },
+      {
+        "answerText": "It filters the elements of an array based on a test",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "What is nested destructuring in JavaScript?",
+    "answers": [
+      {
+        "answerText": "A way to merge multiple arrays into one",
+        "isCorrect": false
+      },
+      {
+        "answerText": "A syntax that allows extracting values from nested objects and arrays",
+        "isCorrect": true
+      },
+      {
+        "answerText": "A method to sort arrays within objects",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "How do you use the ternary operator for conditional rendering in React?",
+    "answers": [
+      { "answerText": "By using an if-else statement", "isCorrect": false },
+      {
+        "answerText": "By evaluating a condition and returning one value if true and another if false",
+        "isCorrect": true
+      },
+      {
+        "answerText": "By creating a switch case statement",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "Why is it important to use the previous state when updating state in React?",
+    "answers": [
+      {
+        "answerText": "It ensures the state updates correctly, even with multiple updates in a short period",
+        "isCorrect": true
+      },
+      {
+        "answerText": "It allows you to merge multiple states into one",
+        "isCorrect": false
+      },
+      {
+        "answerText": "It enables synchronous updates to the state",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "How do you use the spread operator to combine two arrays?",
+    "answers": [
+      { "answerText": "By using the concat method", "isCorrect": false },
+      {
+        "answerText": "By using the spread operator to create a new array that includes elements from both arrays",
+        "isCorrect": true
+      },
+      {
+        "answerText": "By using a for loop to push elements into a new array",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "How do you use the spread operator to update state in React?",
+    "answers": [
+      {
+        "answerText": "By creating a new array that includes elements from the previous state and additional elements",
+        "isCorrect": true
+      },
+      {
+        "answerText": "By modifying the original state array directly",
+        "isCorrect": false
+      },
+      { "answerText": "By using the concat method", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What are template literals in JavaScript, and how do you use them?",
+    "answers": [
+      {
+        "answerText": "A way to create strings by concatenating variables",
+        "isCorrect": false
+      },
+      {
+        "answerText": "A feature that allows embedding expressions and variables within strings using backticks and placeholders",
+        "isCorrect": true
+      },
+      { "answerText": "A method to sort strings", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the difference between synchronous and asynchronous code in JavaScript?",
+    "answers": [
+      {
+        "answerText": "Synchronous code runs sequentially, while asynchronous code allows multiple operations to run simultaneously",
+        "isCorrect": true
+      },
+      {
+        "answerText": "Synchronous code runs in parallel, while asynchronous code runs sequentially",
+        "isCorrect": false
+      },
+      {
+        "answerText": "Synchronous code uses callbacks, while asynchronous code uses promises",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "What is non-blocking code in JavaScript, and why is it important?",
+    "answers": [
+      {
+        "answerText": "Code that uses promises and async/await",
+        "isCorrect": false
+      },
+      {
+        "answerText": "Code that allows the program to keep running other tasks while waiting for an asynchronous operation to complete",
+        "isCorrect": true
+      },
+      {
+        "answerText": "Code that blocks other operations from running",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "What is a promise in JavaScript, and how do you use it?",
+    "answers": [
+      {
+        "answerText": "A method to handle synchronous operations",
+        "isCorrect": false
+      },
+      {
+        "answerText": "A way to handle asynchronous operations, representing a value that may be available now, in the future, or never",
+        "isCorrect": true
+      },
+      { "answerText": "A method to iterate over arrays", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is async/await in JavaScript, and how do you use it?",
+    "answers": [
+      {
+        "answerText": "A method to handle synchronous code",
+        "isCorrect": false
+      },
+      {
+        "answerText": "A simpler way to work with promises, using 'async' before a function and 'await' before a promise",
+        "isCorrect": true
+      },
+      { "answerText": "A method to filter arrays", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What are the differences between Promises and async/await in JavaScript?",
+    "answers": [
+      {
+        "answerText": "Promises use '.then()' and '.catch()', while async/await makes asynchronous code look like synchronous code",
+        "isCorrect": true
+      },
+      {
+        "answerText": "Promises are used for synchronous code, while async/await is used for asynchronous code",
+        "isCorrect": false
+      },
+      {
+        "answerText": "Promises handle arrays, while async/await handles objects",
+        "isCorrect": false
+      }
+    ]
+  }
+]
