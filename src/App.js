@@ -10,6 +10,8 @@ function App() {
   const [concepts, setConcepts] = useState([]);
   const [conceptPracticeQuestions, setConceptPracticeQuestions] = useState([]);
 
+  // TO DO: Discuss if this is the best place to fetch the data
+
   useEffect(() => {
     fetch("concepts.json")
       .then((response) => response.json())

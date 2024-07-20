@@ -126,5 +126,78 @@
     "example": "<pre><code>// Example of short-circuit evaluation with ||\nconst value1 = null;\nconst value2 = 'Default Value';\nconst result = value1 || value2;\nconsole.log(result); // Outputs: 'Default Value' because value1 is null\n\nconst value3 = 'Actual Value';\nconst result2 = value3 || value2;\nconsole.log(result2); // Outputs: 'Actual Value' because value3 is not null or false</code></pre>",
     "difficulty": "easy",
     "quiz": "What is short-circuit evaluation with the `||` operator in JavaScript, and how does it work?"
+  },
+  {
+    "id": 17,
+    "title": "Component Re-rendering with Prop Changes",
+    "description": "In React, when a state variable in a parent component (Component A) changes, it causes the parent component to re-render. If this state variable is passed as a prop to child components (Component B and C), the re-rendering propagates to these children, causing them to re-render as well. This ensures that the UI is consistent and reflects the current state. However, if a non-state variable in Component A changes (i.e., a regular JavaScript variable not managed by React's state or props), it does not automatically trigger re-renders of A, B, or C. React components re-render only when there's a change in their state or props. To trigger re-renders based on non-state variable changes, the variable must be part of React's state management, typically done by incorporating it into the state using `useState` or a similar hook/method.",
+    "example": "// Parent component with state\nfunction Parent() {\n  const [value, setValue] = useState(10);\n  return (\n    <div>\n      <ChildA value={value} />\n      <ChildB value={value} />\n    </div>\n  );\n}\n// Change in state triggers re-render of Parent, ChildA, and ChildB\n\n// Non-state variable\nlet x = 10;\nfunction updateX() {\n  x = 20; // No re-render triggered\n}",
+    "difficulty": "easy",
+    "quiz": "What happens in React when a state variable changes in a parent component and is passed as a prop to child components?"
+  },
+  {
+    "id": 18,
+    "title": "useState in React",
+    "description": "The useState hook is a fundamental hook in React that allows you to add state to functional components. It returns a pair: the current state value and a function that lets you update it. This makes state management in functional components both accessible and efficient.",
+    "example": "// Example of useState in React\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  return (\n    <button onClick={() => setCount(count + 1)}>Increment</button>\n  );\n}",
+    "difficulty": "easy",
+    "quiz": "What is the purpose of the useState hook in React?"
+  },
+  {
+    "id": 19,
+    "title": "useEffect in React",
+    "description": "The useEffect hook lets you perform side effects in function components. It is a hook that encapsulates functions that should be executed after the component renders. useEffect can be configured to run after every render or only when certain values change, making it versatile for various use cases such as API calls, subscriptions, or manually changing the DOM.",
+    "example": "// Example of useEffect in React\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(prevSeconds => prevSeconds + 1);\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n  return <div>Timer: {seconds} seconds</div>;\n}",
+    "difficulty": "easy",
+    "quiz": "What is the purpose of the useEffect hook in React?"
+  },
+
+  {
+    "id": 20,
+    "title": "HTTP Methods: GET, POST, PUT, DELETE",
+    "description": "HTTP methods are actions used to request data from a server or send data to a server. GET is used to retrieve data, POST to send new data, PUT to update existing data, and DELETE to remove data. Understanding these methods is crucial for interacting with RESTful APIs.",
+    "example": "// Example usage of HTTP methods in a RESTful service\n// GET: Fetch data\nfetch('/api/data')\n// POST: Create new entry\nfetch('/api/data', { method: 'POST', body: JSON.stringify(data) })\n// PUT: Update existing entry\nfetch('/api/data/1', { method: 'PUT', body: JSON.stringify(newData) })\n// DELETE: Remove entry\nfetch('/api/data/1', { method: 'DELETE' })",
+    "difficulty": "easy",
+    "quiz": "What is the purpose of the PUT HTTP method?"
+  },
+  {
+    "id": 21,
+    "title": "HTTP Response Status Codes: 200, 400, 500",
+    "description": "HTTP response status codes indicate the result of a server's attempt to fulfill a request. '200 OK' means the request was successful, '400 Bad Request' indicates a client error, and '500 Internal Server Error' signifies a server-side error. These codes are essential for debugging client-server interactions.",
+    "example": "// Example of handling HTTP response status codes\nfetch('/api/data').then(response => {\n  if (response.status === 200) {\n    console.log('Success');\n  } else if (response.status === 400) {\n    console.error('Bad Request');\n  } else if (response.status === 500) {\n    console.error('Server Error');\n  }\n})",
+    "difficulty": "easy",
+    "quiz": "What does the '500' status code indicate in an HTTP response?"
+  },
+  {
+    "id": 22,
+    "title": "Authorization Header in HTTP",
+    "description": "The Authorization header is used in HTTP requests to provide credentials proving the requestor has permission to perform the request. This is often used in API calls that require authentication, typically by sending a token or credentials in a standardized format.",
+    "example": "// Example of using an Authorization header with Bearer token\nfetch('/api/data', {\n  headers: { 'Authorization': 'Bearer your_access_token_here' }\n})",
+    "difficulty": "easy",
+    "quiz": "How is the Authorization header typically used in making API requests?"
+  },
+  {
+    "id": 23,
+    "title": "What is an Endpoint?",
+    "description": "In the context of web development and APIs, an endpoint is a specific URL where a web service or API can be accessed by a client application. Endpoints are designed to handle specific types of operations and are integral to the interaction between client-side and server-side applications.",
+    "example": "// Example of an API endpoint\n// Endpoint for retrieving user data\n'https://api.example.com/users'",
+    "difficulty": "easy",
+    "quiz": "Define an endpoint in the context of APIs."
+  },
+  {
+    "id": 24,
+    "title": "useEffect and Dependency Arrays",
+    "description": "Understanding `useEffect` and its dependency array is crucial for managing side effects in React. A dependency array tells React when to reapply effects after the initial render. An empty array (`[]`) means the effect runs only on mount and unmount, not on updates. Including specific dependencies (`[deps]`) causes the effect to run on mount and whenever those dependencies change. This distinction is vital for ensuring components update correctly based on changes in props or state.",
+    "example": "// useEffect with empty dependency array\nuseEffect(() => {\n  console.log('Component mounted');\n}, []);\n\n// useEffect with dependencies\nuseEffect(() => {\n  console.log('Prop or state changed');\n}, [prop, state]);",
+    "difficulty": "intermediate",
+    "quiz": "What is the effect of changing a dependency in the `useEffect` dependency array on a component's re-rendering behavior?"
+  },
+  {
+    "id": 25,
+    "title": "Popular Git Commit Message Prefixes",
+    "description": "Using standardized prefixes in Git commit messages helps in categorizing and understanding changes in the codebase. These prefixes provide context about the type of changes made, making it easier to review and maintain the code.",
+    "example": "<pre><code>// Example of common Git commit message prefixes\n\n// feat: A new feature\nfeat: add user authentication module\n\n// fix: A bug fix\nfix: resolve crash on user login\n\n// docs: Documentation changes\ndocs: update API usage section\n\n// style: Code style changes (formatting, missing semi colons, etc.)\nstyle: format code according to eslint rules\n\n// refactor: Code changes that neither fix a bug nor add a feature\nrefactor: optimize user data processing\n\n// test: Adding missing tests or correcting existing tests\ntest: add tests for authentication module\n\n// chore: Changes to the build process or auxiliary tools and libraries\nchore: update dependencies and build scripts\n</code></pre>",
+    "difficulty": "easy",
+    "quiz": "What are some common prefixes used in Git commit messages and when are they used?"
   }
 ]
